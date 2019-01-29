@@ -1,4 +1,4 @@
-package com.example.android.footballscorekeeper;
+package com.example.android.footballscorekeeper.activity;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.android.footballscorekeeper.R;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -38,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = (TextView) findViewById(R.id.slovanScore);
         scoreView.setText(String.valueOf(score));
     }
-
 
 
     /**
@@ -81,8 +82,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
     //called methods
     //    increase score for Spartak
     public void scoreGoalSpartak(View view) {
@@ -108,7 +107,6 @@ public class MainActivity extends AppCompatActivity {
         yellowCardCountSlovan = yellowCardCountSlovan + 1;
         displayYellowCardSlovan(yellowCardCountSlovan);
     }
-
 
 
     //    reset score

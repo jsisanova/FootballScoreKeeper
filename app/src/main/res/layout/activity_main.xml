@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/backgroundColor">
+    android:background="@color/backgroundColor"
+    tools:context=".activity.MainActivity">
 
 
     <LinearLayout
@@ -17,20 +17,20 @@
 
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
             android:layout_marginLeft="18dp"
             android:layout_marginRight="18dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/spartakTrnava"
                 android:fontFamily="sans-serif-medium"
+                android:text="@string/spartakTrnava"
                 android:textColor="@color/clubNameColor"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/spartakScore"
@@ -41,54 +41,54 @@
                 android:fontFamily="sans-serif-condensed-light"
                 android:text="@string/initialScore"
                 android:textColor="@color/scoreColor"
-                android:textSize="58sp"/>
+                android:textSize="58sp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:onClick="scoreGoalSpartak"
-                android:text="@string/goal"/>
+                android:text="@string/goal" />
 
             <Button
                 android:id="@+id/yellowCardSpartak"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="30dp"
+                android:background="@color/yellowCardColor"
                 android:onClick="addOnYellowCardSpartak"
                 android:text="@string/yellowCard"
-                android:background="@color/yellowCardColor"
-                android:textColor="#000000"/>
+                android:textColor="#000000" />
 
             <ImageView
-                android:src="@drawable/spartak"
                 android:layout_width="90dp"
-                android:layout_height="90dp"/>
+                android:layout_height="90dp"
+                android:src="@drawable/spartak" />
 
         </LinearLayout>
 
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="@android:color/darker_gray"/>
+            android:background="@android:color/darker_gray" />
 
 
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
             android:layout_marginLeft="18dp"
             android:layout_marginRight="18dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/slovanBratislava"
                 android:fontFamily="sans-serif-medium"
+                android:text="@string/slovanBratislava"
                 android:textColor="@color/clubNameColor"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/slovanScore"
@@ -99,29 +99,29 @@
                 android:fontFamily="sans-serif-condensed-light"
                 android:text="@string/initialScore"
                 android:textColor="@color/scoreColor"
-                android:textSize="58sp"/>
+                android:textSize="58sp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:onClick="scoreGoalSlovan"
-                android:text="@string/goal"/>
+                android:text="@string/goal" />
 
             <Button
                 android:id="@+id/yellowCardSlovan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="30dp"
+                android:background="@color/yellowCardColor"
                 android:onClick="addOnYellowCardSlovan"
                 android:text="@string/yellowCard"
-                android:background="@color/yellowCardColor"
-                android:textColor="#000000"/>
+                android:textColor="#000000" />
 
             <ImageView
-                android:src="@drawable/slovan"
                 android:layout_width="90dp"
-                android:layout_height="90dp"/>
+                android:layout_height="90dp"
+                android:src="@drawable/slovan" />
         </LinearLayout>
     </LinearLayout>
 
@@ -133,7 +133,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="32dp"
         android:onClick="resetScore"
-        android:text="@string/reset"/>
+        android:text="@string/reset" />
 
 </RelativeLayout>
 
