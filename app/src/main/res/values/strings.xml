@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Football Score Keeper</string>
+    <string name="spartakTrnava">FC Spartak Trnava</string>
+    <string name="slovanBratislava">ŠK Slovan Bratislava</string>
+    <string name="initialScore">0</string>
+    <string name="goal">Goal!</string>
+    <string name="yellowCard">0</string>
+    <string name="reset">reset</string>
+</resources>
+
