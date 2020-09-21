@@ -16,8 +16,7 @@ public class MainActivity extends AppCompatActivity {
     int scoreSlovan = 0;
     int yellowCardCountSpartak = 0;
     int yellowCardCountSlovan = 0;
-    boolean isPressed = true;
-
+    boolean isPressed = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +40,18 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(score));
     }
 
+    //called methods
+    //    increase score for Spartak
+    public void scoreGoalSpartak(View view) {
+        scoreSpartak ++;
+        displayForTeamA(scoreSpartak);
+    }
+
+    //    increase score for Slovan
+    public void scoreGoalSlovan(View view) {
+        scoreSlovan ++;
+        displayForTeamB(scoreSlovan);
+    }
 
     /**
      * Displays yellow / red card for Spartak
@@ -49,18 +60,18 @@ public class MainActivity extends AppCompatActivity {
         Button b = (Button) findViewById(R.id.yellowCardSpartak);
         b.setText(String.valueOf(number));
 
-//        if more than 1 yellow card, card changes to red
+//        after pressing reset color of card is yellow again
         if (isPressed == false) {
             b.setBackgroundColor(getResources().getColor(R.color.yellowCardColor));
         }
 
-//        after pressing reset color of card is yellow again
+//        if more than 1 yellow card, card changes to red
         if (number > 1) {
+            isPressed = true;
             b.setText(" ");
             b.setBackgroundColor(Color.RED);
         }
     }
-
 
     /**
      * Displays yellow / red card for Slovan
@@ -69,32 +80,18 @@ public class MainActivity extends AppCompatActivity {
         Button b = (Button) findViewById(R.id.yellowCardSlovan);
         b.setText(String.valueOf(number));
 
-//        if more than 1 yellow card, card changes to red
-        if (number > 1) {
-            b.setText(" ");
-            b.setBackgroundColor(Color.RED);
-        }
-
-//        after pressing reset color of card is yellow again
+        //  after pressing reset button the color of card is yellow again
         if (isPressed == false) {
             b.setBackgroundColor(getResources().getColor(R.color.yellowCardColor));
         }
+
+//        if more than 1 yellow card, card changes to red
+        if (number > 1) {
+            isPressed = true;
+            b.setText(" ");
+            b.setBackgroundColor(Color.RED);
+        }
     }
-
-
-    //called methods
-    //    increase score for Spartak
-    public void scoreGoalSpartak(View view) {
-        scoreSpartak = scoreSpartak + 1;
-        displayForTeamA(scoreSpartak);
-    }
-
-    //    increase score for Slovan
-    public void scoreGoalSlovan(View view) {
-        scoreSlovan = scoreSlovan + 1;
-        displayForTeamB(scoreSlovan);
-    }
-
 
     //    increase number of yellow cards for Spartak
     public void addOnYellowCardSpartak(View view) {
@@ -122,7 +119,3 @@ public class MainActivity extends AppCompatActivity {
         displayYellowCardSlovan(yellowCardCountSlovan);
     }
 }
-
-
-
-
